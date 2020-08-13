@@ -47,7 +47,7 @@
                 android:text="@{beer.tagline}"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="italic"
-                tools:text="Tagline" />
+                tools:text="tagline" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </layout>

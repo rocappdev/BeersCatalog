@@ -29,7 +29,6 @@ class BeerListAdapter(
         return items.size
     }
 
-    @Suppress("DEPRECATION")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val beer = items[position]
         holder.appBinding.beer = beer
@@ -38,13 +37,14 @@ class BeerListAdapter(
                 holder.appBinding.cardviewItem.backgroundTintList =
                     context.resources.getColorStateList(R.color.lightGray, null)
             } else {
+                @Suppress("DEPRECATION")
                 holder.appBinding.cardviewItem.backgroundTintList =
                     context.resources.getColorStateList(R.color.lightGray)
             }
         else
             holder.appBinding.cardviewItem.backgroundTintList = null
 
-        holder.itemView.setOnClickListener { view ->
+        holder.itemView.setOnClickListener {
             if (SystemClock.elapsedRealtime() - mLastClickTime < 1000) {
                 return@setOnClickListener
             }
