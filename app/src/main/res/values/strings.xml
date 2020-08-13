@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Beers Catalog</string>
+    <string name="needs_replacement">Needs replacement</string>
+    <string name="replacement_done">Replacement done</string>
+    <string name="not_available">There’s no availability of this product</string>
+    <string name="ibu">Bitterness:</string>
+    <string name="abv">Alcohol by volume:</string>
+    <string name="description">Description:</string>
+    <string name="beer_image">Beer image</string>
+    <string name="food_pairing">Food pairing:</string>
+</resources>
