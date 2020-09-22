@@ -12,12 +12,14 @@ object Preferences {
         list?.let {
             val mList = HashSet<String>(list)
             prefs.edit().putStringSet(
-                BEERS_NOT_AVAILABLE, mList).apply()
+                BEERS_NOT_AVAILABLE, mList
+            ).apply()
         }
     }
 
     fun getBeersNotAvailable(): MutableSet<String>? {
         return prefs.getStringSet(
-            BEERS_NOT_AVAILABLE, setOf())
+            BEERS_NOT_AVAILABLE, setOf()
+        )
     }
 }
