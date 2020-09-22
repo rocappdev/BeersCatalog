@@ -56,13 +56,11 @@ class BeerListActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_CODE) {
-            if (resultCode == RESULT_OK) {
-                data?.extras?.let {
-                    val selectedBeer =
-                        data.getSerializableExtra(SELECTED_BEER) as Beer
-                    beerListViewModel.setBeerAvailability(selectedBeer)
-                }
+        if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+            data?.extras?.let {
+                val selectedBeer =
+                    data.getSerializableExtra(SELECTED_BEER) as Beer
+                beerListViewModel.setBeerAvailability(selectedBeer)
             }
         }
     }
